@@ -1,0 +1,41 @@
+from django.http import HttpResponse
+
+def hello(request):
+	return HttpResponse("Hello world! from views.py")
+
+def postget(request):
+	outp =  """
+		<form action = "/postget/" method="post">
+			<label for="hello">Say hello!!!: </label>
+			<input id="hello" type="str" name="hello" value=""><br>
+			<button type="submit"> 
+				OK
+			</button>
+	    	</form>
+		%s
+		"""
+	if request.method == 'POST':
+		param = request.POST['hello']
+		outp = outp % ("You said :  " + str(param) + '\n')
+		return HttpResponse(outp)
+	return HttpResponse(outp)
+
+def myHello(request):
+	if request.method =='GET':
+		params=request.GET.items()
+		return HttpResponse(params)
+#		for item in params:
+#			result.append(str(item[0])+'\n')
+#		return HttpResponse(' '.join(result))
+#	return HttpResponse("no get")
+
+#        params=request.GET()
+#        result = []
+#	result.append(str(params)+'\n')        
+#	#for item in params:
+#       #        result.append(str(item[0])+'\n')
+#        return HttpResponse(result)
+#    return HttpResponse("you don't said hello")
+
+
+	
