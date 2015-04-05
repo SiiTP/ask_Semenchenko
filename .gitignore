@@ -1,2 +1,4 @@
 ForGitIgnore
 *.swp
+*.html~
+index.html
