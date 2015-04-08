@@ -1,0 +1,42 @@
+.title-tag {
+    border: solid 2px #000000;
+    border-radius: 20px;
+    margin-left: -20px;
+    padding: 5px;
+    background-color: lavender;
+    margin-bottom: 10px;
+}
+.question {
+    border: solid 1px #000000;
+    border-radius: 20px;
+    background-color: lavender;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    width: 100%;
+    float: left;
+}
+    .leftpartQuestion {
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 21%;
+    }
+        .ref-on-answers {
+            width: 20%;
+            float: left;
+        }
+        .tag-of-answers {
+            width: 100%;
+
+        }
+    .rightPartQuestion {
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 74%;
+    }
+.paginationMargins {
+    float: inherit;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}

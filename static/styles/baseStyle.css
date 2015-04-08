@@ -1,0 +1,39 @@
+#maincolumn{
+    float: left;
+    #width: 65%;
+}
+
+#rightcolumn{
+    border: solid 2px #000000;
+    border-radius: 20px;
+    background-color: lavender;
+    margin-left: 16px;
+    float: left;
+    #width: 33%;
+}
+
+.title {
+    background-color: lightgray;
+    margin-top: 10px;
+    color: #000000;
+}
+
+.marginsLeftTop {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.textAsk {
+    font-family: "Arial";
+    font-weight: bold;
+    font-size: medium;
+}
+.textTitle {
+    display: block;
+    float: left;
+    padding: 10px 20px;
+    margin-left: -20px;
+    font-size: 30px;
+    color: #000000;
+    text-shadow: 0px 1px 0px #FFF;
+}
