@@ -3,15 +3,12 @@ server {
 	listen 80;
 	server_name asksemenchenko.ru;
 	index index.html index.htm;
-	location  ~/*\.(html|css|js) {
-	#location ~* .\.\w\w\w?\w?$ {
-		root /home/ivan/ask_Semenchenko/static;
-	}
-
-	location ^~/*\.(jpeg|jpg|png) {
+	location ^~ /uploads/ {
 		root /home/ivan/ask_Semenchenko/uploads;
+	}
+	location ~* .\.\w\w\w?\w?$ {
+		root /home/ivan/ask_Semenchenko/static;
 	}	
-
 	location / {
 		proxy_pass http://127.0.0.1:8081;
 		proxy_set_header X-Real-IP $remote_addr;

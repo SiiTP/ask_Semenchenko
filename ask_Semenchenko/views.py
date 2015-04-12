@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def hello(request):
+	#render(request,'picture.html',{})
 	return HttpResponse("Hello world! from views.py")
 
 def postget(request):
