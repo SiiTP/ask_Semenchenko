@@ -3,9 +3,12 @@ server {
 	listen 80;
 	server_name asksemenchenko.ru;
 	index index.html index.htm;
+	#все запросы с /uploads
 	location ^~ /uploads/ {
 		root /home/ivan/ask_Semenchenko/uploads;
 	}
+	#все у чего есть расширение, кроме uploads
+	#(прямое совпадение /uploads/ приоритетнее)
 	location ~* .\.\w\w\w?\w?$ {
 		root /home/ivan/ask_Semenchenko/static;
 	}	
