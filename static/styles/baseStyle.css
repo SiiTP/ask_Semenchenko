@@ -1,15 +1,35 @@
+.myNavbar{
+    padding-right: 0px;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, white, lavender);
+}
+
+.registrationWind_Unregistered {
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    margin-right: 0px;
+    width: 32%;
+}
+
+.registrationWind_Registered {
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    margin-right: 0px;
+    width: 32%;
+}
+
 #maincolumn{
-    float: left;
-    #width: 65%;
+    margin-left: 0px;
 }
 
 #rightcolumn{
-    border: solid 2px #000000;
+    border: solid 1px lightgray;
     border-radius: 20px;
-    background-color: lavender;
+    background-image: linear-gradient(to bottom, #FFF, lavender);
     margin-left: 16px;
     float: left;
-    #width: 33%;
 }
 
 .title {
@@ -29,8 +49,8 @@
     font-size: medium;
 }
 .textTitle {
-    display: block;
     float: left;
+    margin-top: 10px;
     padding: 10px 20px;
     margin-left: -20px;
     font-size: 30px;

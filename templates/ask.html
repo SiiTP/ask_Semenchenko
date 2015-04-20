@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block head %}
+    <link rel="stylesheet" href="/styles/askStyle.css"/>
+{% endblock %}
+{% block content %}
+    <div class="askColumn">
+        <h4 class="newQuestion">New Question</h4>
+        <div>
+            <div class="row" style="margin: 0px; padding: 10px">
+                <h6 class="rubric span1">Title</h6>
+                <input type="text" class="input inputFieldTitle">
+            </div>
+            <div class="row" style="margin: 0px; padding: 10px">
+                <h6 class="rubric span1">Text</h6>
+                <!--<input type="span7" class="input inputFieldText">-->
+                <textarea class="inputFieldText"></textarea>
+            </div>
+            <div class="row" style="margin: 0px; padding: 10px">
+                <h6 class="rubric span1">Tags</h6>
+                <input type="text" class="input inputFieldTags">
+            </div>
+            <button type="submit" class="btn" style="margin-left: 82px">
+                <div class="textAsk">
+                    ASK!
+                </div>
+            </button>
+        </div>
+    </div>
+{% endblock %}

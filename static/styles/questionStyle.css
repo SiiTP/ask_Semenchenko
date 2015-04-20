@@ -1,0 +1,38 @@
+.questionColumn{
+    padding: 20px;
+    padding-top: 0px;
+    border: solid 1px lightgray;
+    border-radius: 20px;
+    min-height: 100px;
+}
+.answer {
+    font-family: "DejaVu Sans";
+    border: solid 1px lightgray;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #FFF, lavender);
+    margin-bottom: 10px;
+    margin-left: 0px;
+    width: 100%;
+    float: left;
+}
+    .ratingAnswer{
+        font-size: 25px;
+        margin-left: 10px;
+        width: 60px;
+        margin-bottom: 10px;
+    }
+    .answerText{
+        margin-top: 10px;
+    }
+    .leftPartAnswer{
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 21%;
+    }
+    .rightPartAnswer{
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 74%;
+    }

@@ -1,21 +1,22 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html>
     	<head >
     		<title>Ask_Semenchneko</title>
     			<meta name="viewport" content="width=device-width, initial-scale=1.0">
     			<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"/>
     			<link rel="stylesheet" href="/styles/baseStyle.css"/>
-                <link rel="stylesheet" href="/styles/mainStyle.css"/>
+
+                {% block head %}
+                {% endblock %}
     			<script src="/jquery.js"></script>
     	</head>
-    	<body>
+    	<body style="font-family: DejaVu Sans">
     		<div class="container">
-                    <div class="navbar" style="margin-top: 10px;">
-                        <div class="navbar-inner">
-                            <li class="textTitle" href="#">AskSemenchenko</li>
+                    <div style="margin-top: 10px; " class="navbar">
+                        <div class="navbar-inner myNavbar">
+                            <div class="textTitle" href="#">AskSemenchenko</div>
                             <!--li class="divider-vertical"></li-->
-                            <form class="navbar-form form-search pull-left">
+                            <form class="navbar-form form-search pull-left" style="margin-top: 10px">
                                 <input type="text" class="input-medium search-query" placeholder = "Введите вопрос"/>
                                 <button type="submit" class="btn">
                                     <div class="textAsk">
@@ -23,25 +24,43 @@
                                     </div>
                                 </button>
                             </form>
+                            <!--form action="/main/" method="get">
+                                <input id="regVariant" type="str" name="regVariant">
+                            </form-->
+                            {% block registrationForm %}
+                            <div class="registrationWind_Unregistered">
+                                <div class="row" style="margin-top: 0px; margin-left: 0px">
+                                    <a href="#">log in</a>
+                                    &nbsp
+                                    &nbsp
+                                    &nbsp
+                                    <a href="#">registration</a>
+                                </div>
+                            </div>
+                            {% endblock %}
                         </div>
                     </div>
     			<div class="row" style="margin-left: 0px;">
                     <div class="span8 " style="margin-left : 0px">
-                        {% block main %}
+                        {% block content %}
                         {% endblock %}
                     </div>
 					<div class="span4" id="rightcolumn">
 						<h2 class="marginsLeftTop">Popular Tags</h2>
 							<ul>
-								<li>tag1</li>
-								<li>tag2</li>
-								<li>tag3</li>
+								<a>tag1</a>
+                                <br>
+								<a>tag2</a>
+                                <br>
+								<a>tag3</a>
 							</ul>
                         <h2 class="marginsLeftTop">Popular Autors</h2>
                             <ul>
-								<li>Shildt</li>
-								<li>Neigel</li>
-                                <li>Flanagan</li>
+								<a>Shildt</a>
+                                <br>
+								<a>Neigel</a>
+                                <br>
+								<a>Flanagan</a>
 							</ul>
 					</div>    			
     			</div>
