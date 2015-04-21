@@ -1,0 +1,9 @@
+.registerColumn {
+    border: solid 1px lightgray;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, white, lavender);
+}
+
+.registerInputField {
+    width: 200px;
+}

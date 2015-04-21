@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block head %}
+    <link rel="stylesheet" href="/styles/loginStyle.css"/>
+{% endblock %}
+{% block content %}
+    <div class="loginColumn">
+        <h3 style="margin-left: 20px">Log In</h3>
+        <div class="alert alert-error" style="margin-left: 20px; width: 302px">
+            <a class="close" href="#" data-dismiss="alert">X</a>Данные неккоректны!
+        </div>
+        <form>
+            <label>
+                <h5 class="span2">Login</h5>
+                <input type="text" class="inputFieldLogin" placeholder="enter login">
+            </label>
+            <label>
+                <h5 class="span2">Password</h5>
+                <input type="password" class="inputFieldPassword" placeholder="enter password">
+            </label>
+            <button type="submit" style="margin-left: 160px">Log In</button>
+        </form>
+        <a href="#" style="margin-left: 160px">Create new account</a>
+    </div>
+{% endblock %}

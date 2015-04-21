@@ -23,6 +23,7 @@
     }
     .answerText{
         margin-top: 10px;
+        min-height: 90px;
     }
     .leftPartAnswer{
         float: left;
@@ -34,5 +35,21 @@
         float: left;
         margin-top: 10px;
         margin-left: 10px;
-        width: 74%;
+        width: 72%;
+        min-height: 120px;
     }
+.myLine{
+    border-top: solid 2px lightgray;
+    float: left;
+    margin-left: 20px;
+    width: 94%;
+    line-height: 0px;
+    margin-bottom: 10px;
+}
+
+.inputAnswerText{
+    padding: 0px;
+    width: 100%;
+    min-height: 100px;
+    resize: none;
+}

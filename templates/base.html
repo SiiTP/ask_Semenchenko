@@ -5,28 +5,24 @@
     			<meta name="viewport" content="width=device-width, initial-scale=1.0">
     			<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"/>
     			<link rel="stylesheet" href="/styles/baseStyle.css"/>
-
                 {% block head %}
                 {% endblock %}
     			<script src="/jquery.js"></script>
     	</head>
     	<body style="font-family: DejaVu Sans">
-    		<div class="container">
+    		<div class="container" style="padding-bottom: 10px">
                     <div style="margin-top: 10px; " class="navbar">
                         <div class="navbar-inner myNavbar">
                             <div class="textTitle" href="#">AskSemenchenko</div>
-                            <!--li class="divider-vertical"></li-->
+
                             <form class="navbar-form form-search pull-left" style="margin-top: 10px">
-                                <input type="text" class="input-medium search-query" placeholder = "Введите вопрос"/>
+                                <input type="text" class="input-large search-query" placeholder = "Введите вопрос"/>
                                 <button type="submit" class="btn">
                                     <div class="textAsk">
                                         ASK!
                                     </div>
                                 </button>
                             </form>
-                            <!--form action="/main/" method="get">
-                                <input id="regVariant" type="str" name="regVariant">
-                            </form-->
                             {% block registrationForm %}
                             <div class="registrationWind_Unregistered">
                                 <div class="row" style="margin-top: 0px; margin-left: 0px">
@@ -48,19 +44,18 @@
 					<div class="span4" id="rightcolumn">
 						<h2 class="marginsLeftTop">Popular Tags</h2>
 							<ul>
-								<a>tag1</a>
-                                <br>
-								<a>tag2</a>
-                                <br>
-								<a>tag3</a>
+								{% for a  in "abcdefg" %}
+                                    <a>tag</a>
+                                    &nbsp;
+                                {% endfor %}
 							</ul>
-                        <h2 class="marginsLeftTop">Popular Autors</h2>
+                        <h2 class="marginsLeftTop">Best Members</h2>
                             <ul>
-								<a>Shildt</a>
-                                <br>
-								<a>Neigel</a>
-                                <br>
-								<a>Flanagan</a>
+                                {% for a  in "abcde" %}
+                                    <a>Author</a>
+                                    <br>
+                                {% endfor %}
+
 							</ul>
 					</div>    			
     			</div>

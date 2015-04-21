@@ -45,6 +45,11 @@ def ask(request):
 def question(request):
     return render(request, 'question.html', {})
 
+def login(requset):
+    return render(requset, 'login.html', {})
+
+def register(requset):
+    return render(requset, 'register.html', {})
 
 def image(request):
     return render(request, 'image.html', {})

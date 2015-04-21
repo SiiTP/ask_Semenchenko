@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block head %}
+    <link rel="stylesheet" href="/styles/registerStyle.css"/>
+{% endblock %}
+{% block content %}
+    <div class="registerColumn">
+        <h3 style="margin-left: 20px">Registration</h3>
+        <div class="alert alert-error" style="margin-left: 20px; width: 302px">
+            <a class="close" href="#" data-dismiss="alert">X</a>Данные неккоректны!
+        </div>
+        <form>
+            <label>
+                <h5 class="span2">Login</h5>
+                <input type="text" class="registerInputField" placeholder="user">
+            </label>
+            <label>
+                <h5 class="span2">Email</h5>
+                <input type="email" class="registerInputField" placeholder="foo@example.ru">
+            </label>
+            <label>
+                <h5 class="span2">NickName</h5>
+                <input type="text" class="registerInputField" placeholder="u123">
+            </label>
+            <label>
+                <h5 class="span2">Password</h5>
+                <input type="password" class="registerInputField" placeholder="your password">
+            </label>
+            <label>
+                <h5 class="span2">Repeat</h5>
+                <input type="password" class="registerInputField" placeholder="repeating your password">
+            </label>
+            <label>
+                <h5 class="span2">Upload avatar</h5>
+                <input type="text" style="width: 155px; margin-bottom: 0px" placeholder="route of your avatar">
+                <button class="btn "><span class="icon-folder-open"></span></button>
+            </label>
+            <button type="submit" class="btn btn-success" style="margin-top: 10px">Register!</button>
+        </form>
+    </div>
+{% endblock %}
