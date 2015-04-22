@@ -14,26 +14,25 @@
                     <div style="margin-top: 10px; " class="navbar">
                         <div class="navbar-inner myNavbar">
                             <div class="textTitle" href="#">AskSemenchenko</div>
-
-                            <form class="navbar-form form-search pull-left" style="margin-top: 10px">
-                                <input type="text" class="input-large search-query" placeholder = "Введите вопрос"/>
-                                <button type="submit" class="btn">
-                                    <div class="textAsk">
-                                        ASK!
+                                <form class="navbar-form form-search pull-left" style="margin-top: 10px">
+                                    <input type="text" class="input-large search-query" placeholder = "Введите вопрос"/>
+                                    <button type="submit" class="btn">
+                                        <div class="textAsk">
+                                            ASK!
+                                        </div>
+                                    </button>
+                                </form>
+                                {% block registrationForm %}
+                                    <div class="registrationWind_Unregistered">
+                                        <div class="row" style="margin-top: 0px; margin-left: 0px">
+                                            <a class="linkColor" href="#">log in</a>
+                                            &nbsp
+                                            &nbsp
+                                            &nbsp
+                                            <a class="linkColor" href="#">registration</a>
+                                        </div>
                                     </div>
-                                </button>
-                            </form>
-                            {% block registrationForm %}
-                            <div class="registrationWind_Unregistered">
-                                <div class="row" style="margin-top: 0px; margin-left: 0px">
-                                    <a href="#">log in</a>
-                                    &nbsp
-                                    &nbsp
-                                    &nbsp
-                                    <a href="#">registration</a>
-                                </div>
-                            </div>
-                            {% endblock %}
+                                {% endblock %}
                         </div>
                     </div>
     			<div class="row" style="margin-left: 0px;">
@@ -43,17 +42,17 @@
                     </div>
 					<div class="span4" id="rightcolumn">
 						<h2 class="marginsLeftTop">Popular Tags</h2>
-							<ul>
-								{% for a  in "abcdefg" %}
-                                    <a>tag</a>
-                                    &nbsp;
+							<ul >
+								{% for a  in "abcdefgasfsdfsf" %}
+                                    <a class="tagsStyle">tag</a>
+                                    &nbsp; &nbsp; &nbsp;
                                 {% endfor %}
 							</ul>
                         <h2 class="marginsLeftTop">Best Members</h2>
                             <ul>
-                                {% for a  in "abcde" %}
-                                    <a>Author</a>
-                                    <br>
+                                {% for a  in "abcdeasdf" %}
+                                    <a class="tagsStyle">Author</a>
+                                    &nbsp; &nbsp;
                                 {% endfor %}
 
 							</ul>

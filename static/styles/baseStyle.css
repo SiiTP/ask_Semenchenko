@@ -3,7 +3,21 @@
     border-radius: 20px;
     background-image: linear-gradient(to bottom, white, lavender);
 }
-    .registrationWind_Unregistered {
+    .textAsk {
+        font-family: "Arial";
+        font-weight: bold;
+        font-size: medium;
+    }
+    .textTitle {
+        float: left;
+        margin-top: 10px;
+        padding: 10px 20px;
+        margin-left: -20px;
+        font-size: 30px;
+        color: darkgray;
+        text-shadow: 0px 1px 0px #FFF;
+    }
+        .registrationWind_Unregistered {
         float: right;
         margin: 10px;
         padding: 10px;
@@ -21,7 +35,6 @@
 #maincolumn{
     margin-left: 0px;
 }
-
 #rightcolumn{
     border: solid 1px lightgray;
     border-radius: 20px;
@@ -29,6 +42,11 @@
     margin-left: 16px;
     float: left;
 }
+    .tagsStyle {
+        font-family: "DejaVu Sans";
+        font-size: 16px;
+        color: darkblue;
+    }
 
 .title {
     background-color: lightgray;
@@ -41,17 +59,7 @@
     margin-left: 10px;
 }
 
-.textAsk {
-    font-family: "Arial";
-    font-weight: bold;
-    font-size: medium;
+.linkColor {
+    color: darkblue;
 }
-.textTitle {
-    float: left;
-    margin-top: 10px;
-    padding: 10px 20px;
-    margin-left: -20px;
-    font-size: 30px;
-    color: #000000;
-    text-shadow: 0px 1px 0px #FFF;
-}
+
