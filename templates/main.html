@@ -27,7 +27,7 @@
         <div class="title-tag" >
             <h4 style="margin: 0px; margin-left: 15px"> Tag : computer</h4>
         </div>
-        {% for i in "abcd" %}
+        {% for question in questions %}
             <div class="question">
                 <div class="leftPartQuestion">
                     <div class="item" style="margin: 10px; width: 90px; height: 90px; border: solid 1px lightgray;">
@@ -44,13 +44,11 @@
                     </div>
                 </div>
                 <div class="rightPartQuestion">
-                    <h5>
-                        How to Choose a Computer?
+                    <h5 style="width: 300px">
+                        {{ question.title }}
                     </h5>
-                    <p> Getting a new computer is an exciting experience. The promise of brand new technology is
-                        hard to stifle. Unfortunately, that excitement can quickly wane if you find you didn’t
-                        get the computer you need. The vast number of choices can be daunting, but this guide can help
-                        steer you towards technical bliss.
+                    <p>
+                        {{ question.text }}
                     </p>
                     <div style="padding: 10px; padding-left: 0px">
                         <a class="ref-on-answers linkColor">answers(3)</a>
@@ -60,6 +58,9 @@
                             <a class="linkColor">technology</a>
                             <a class="linkColor">choosing</a>
                         </div>
+                    </div>
+                    <div class="createdDate">
+                        {{ question.createdDate }}
                     </div>
                 </div>
             </div>

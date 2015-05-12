@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from ask.models import Question
 
 
 def hello(request):
@@ -32,10 +33,13 @@ def myHello(request):
 
 
 def main(request):
+    context = {
+        'questions': Question.objects.all()[:10]
+    }
     #if request.method == 'GET':
     #    regVariant = request.GET.get('regVariant')
     #    context = {'regVariant' : regVariant}
-    return render(request, 'main.html', {})
+    return render(request, 'main.html', context)
 
 
 def ask(request):

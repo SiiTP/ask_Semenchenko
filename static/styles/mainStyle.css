@@ -42,6 +42,10 @@
         margin-left: 10px;
         width: 74%;
     }
+        .createdDate {
+            #width: 100px;
+            float: right;margin-bottom: 10px;
+        }
 
 .paginationMargins {
     float: inherit;
