@@ -3,6 +3,8 @@
     border-radius: 20px;
     margin-left: 0px;
     padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-image: linear-gradient(to bottom, #FFF, lavender);
     margin-bottom: 10px;
 }
@@ -34,7 +36,6 @@
         }
         .tag-of-answers {
             width: 100%;
-
         }
     .rightPartQuestion {
         float: left;
@@ -44,7 +45,8 @@
     }
         .createdDate {
             #width: 100px;
-            float: right;margin-bottom: 10px;
+            float: right;
+            margin-bottom: 10px;
         }
 
 .paginationMargins {

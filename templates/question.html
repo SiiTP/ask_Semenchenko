@@ -23,45 +23,50 @@
 </div>
 {% endblock %}
 {% block content %}
-    <div class="question" >
-        <div class="leftPartQuestion">
-            <div class="item" style="margin: 10px; width: 90px; height: 90px; border: solid 1px lightgray;">
-                <img src="http://lorempixel.com/90/90/">
+
+        <div class="question" >
+            <div class="leftPartQuestion">
+                <div class="item" style="margin: 10px; width: 90px; height: 90px; border: solid 1px lightgray;">
+                    <img src="/uploads/avatars/{{ question.user.userprofile.avatar }}">
+                </div>
+                <div class="rating">
+                    <p align="center">
+                        {{ question.rating }}
+                    </p>
+                    <div class="btn-group" style="margin-left: 7%;">
+                        <button type="button" class="btn"><span class="icon-thumbs-up"></span></button>
+                        <button type="button" class="btn"><span class="icon-thumbs-down"></span></button>
+                    </div>
+                </div>
             </div>
-            <div class="rating">
-                <p align="center">
-                    0
+            <div class="rightPartQuestion">
+                <h5>
+                    {{ question.title }}
+                </h5>
+                <p style="height: 70px;">
+                    {{ question.text }}
                 </p>
-                <div class="btn-group" style="margin-left: 7%;">
-                    <button type="button" class="btn"><span class="icon-thumbs-up"></span></button>
-                    <button type="button" class="btn"><span class="icon-thumbs-down"></span></button>
+                <div style="padding: 10px; padding-left: 0px">
+                    <div class="tag-of-answers">
+                        <b>Tags : </b>
+                        {% for tag in tags %}
+                            <a class="linkColor" href="{% url "tag" tag.id %}">{{tag.text}}</a>
+                            {% if not forloop.last %}
+                                <b>, </b>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="createdDate">
+                    {{ question.createdDate|date:"d M Y, H:i" }}
                 </div>
             </div>
         </div>
-        <div class="rightPartQuestion">
-            <h5>
-                How to Choose a Computer?
-            </h5>
-            <p> Getting a new computer is an exciting experience. The promise of brand new technology is
-                hard to stifle. Unfortunately, that excitement can quickly wane if you find you didn’t
-                get the computer you need. The vast number of choices can be daunting, but this guide can help
-                steer you towards technical bliss.
-            </p>
-            <div style="padding: 10px; padding-left: 0px">
-                <a class="ref-on-answers linkColor">answers(3)</a>
-                <div class="tag-of-answers">
-                    <b>Tags : </b>
-                    <a class="linkColor">computer</a>
-                    <a class="linkColor">technology</a>
-                    <a class="linkColor">choosing</a>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="myLine">
     </div>
     <div>
-        {% for foo in 'ab' %}
+        {% for answer in answers  %}
             <div class="answer">
                 <div class="leftPartAnswer">
                     <div class="item" style="width: 60px; height: 60px; border: solid 1px lightgray; margin: 10px;">
@@ -69,7 +74,7 @@
                     </div>
                     <div class="ratingAnswer">
                         <p align="center">
-                            0
+                            {{ answer.rating }}
                         </p>
                         <div class="btn-group" style="margin-left: 5%;">
                             <button type="button" class="btn btn-mini"><span class="icon-thumbs-up"></span></button>
@@ -78,16 +83,33 @@
                     </div>
                 </div>
                 <div class="rightPartAnswer">
-                    <p class="answerText"> This is hard deal. Ask specialists in shop.
+                    <p class="answerText"> {{ answer.text }}
                     </p>
-                    <div  style="padding: 10px; padding-left: 0px;">
+                    <div class="row"  style="padding: 10px; padding-left: 20px;">
                         <input type="checkbox" style="height: 17px; weight: 17px; margin-top: 0px">
                         <b>Correct!</b>
-
+                        <div style="float: right">
+                            {{ answer.createdData|date:"d M Y, H:i" }}
+                        </div>
                     </div>
                 </div>
             </div>
+            {% empty %}
+            <h4 style="margin-left: 20px">No answers</h4>
         {% endfor %}
+        <div class="pagination paginationMargins">
+            <ul>
+                {% if answers.has_previous %}
+                    <li><a href="?page={{ answers.previous_page_number }}">Prev</a></li>
+                {% endif %}
+                {% for p in answers.paginator.page_range %}
+                    <li><a href="?page={{ p }}">{{ p }}</a></li>
+                {% endfor %}
+                {% if answers.has_next %}
+                    <li><a href="?page={{ answers.next_page_number }}">Next</a></li>
+                {% endif %}
+            </ul>
+        </div>
     </div>
     <div class="myLine"></div>
     <div>
